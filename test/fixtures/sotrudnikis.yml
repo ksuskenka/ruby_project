@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  tab_number: 1
+  name: MyString
+  short_name: MyString
+  username: MyString
+  email: MyString
+  district: MyString
+  job: MyString
+  adress: MyString
+  telephone: MyString
+  access: false
+
+two:
+  tab_number: 1
+  name: MyString
+  short_name: MyString
+  username: MyString
+  email: MyString
+  district: MyString
+  job: MyString
+  adress: MyString
+  telephone: MyString
+  access: false

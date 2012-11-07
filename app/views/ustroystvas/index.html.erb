@@ -1,0 +1,47 @@
+<h1>Listing ustroystvas</h1>
+
+<table>
+  <tr>
+    <th>Type</th>
+    <th>Name</th>
+    <th>Department</th>
+    <th>Worker</th>
+    <th>Invent number</th>
+    <th>District</th>
+    <th>Cost</th>
+    <th>Date intranse</th>
+    <th>Date of introduce</th>
+    <th>Object operation</th>
+    <th>Operation date</th>
+    <th>Date off</th>
+    <th>Amortization</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ustroystvas.each do |ustroystva| %>
+  <tr>
+    <td><%= ustroystva.type %></td>
+    <td><%= ustroystva.name %></td>
+    <td><%= ustroystva.department %></td>
+    <td><%= ustroystva.worker %></td>
+    <td><%= ustroystva.invent_number %></td>
+    <td><%= ustroystva.district %></td>
+    <td><%= ustroystva.cost %></td>
+    <td><%= ustroystva.date_intranse %></td>
+    <td><%= ustroystva.date_of_introduce %></td>
+    <td><%= ustroystva.object_operation %></td>
+    <td><%= ustroystva.operation_date %></td>
+    <td><%= ustroystva.date_off %></td>
+    <td><%= ustroystva.amortization %></td>
+    <td><%= link_to 'Show', ustroystva %></td>
+    <td><%= link_to 'Edit', edit_ustroystva_path(ustroystva) %></td>
+    <td><%= link_to 'Destroy', ustroystva, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ustroystva', new_ustroystva_path %>

@@ -1,0 +1,57 @@
+<%= form_for(@sotrudniki) do |f| %>
+  <% if @sotrudniki.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sotrudniki.errors.count, "error") %> prohibited this sotrudniki from being saved:</h2>
+
+      <ul>
+      <% @sotrudniki.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :number %><br />
+    <%= f.text_field :number %>
+  </div>
+  <div class="field">
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :district %><br />
+    <%= f.text_field :district %>
+  </div>
+  <div class="field">
+    <%= f.label :job %><br />
+    <%= f.text_field :job %>
+  </div>
+  <div class="field">
+    <%= f.label :adress %><br />
+    <%= f.text_field :adress %>
+  </div>
+  <div class="field">
+    <%= f.label :telephone %><br />
+    <%= f.text_field :telephone %>
+  </div>
+  <div class="field">
+    <%= f.label :access %><br />
+    <%= f.check_box :access %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

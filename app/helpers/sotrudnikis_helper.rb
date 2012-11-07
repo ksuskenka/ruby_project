@@ -1,0 +1,2 @@
+module SotrudnikisHelper
+end
