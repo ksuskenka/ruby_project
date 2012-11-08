@@ -1,0 +1,41 @@
+<h1>Listing sotrudnikis</h1>
+
+<table>
+  <tr>
+    <th>Tab number</th>
+    <th>Name</th>
+    <th>Short name</th>
+    <th>Username</th>
+    <th>Email</th>
+    <th>District</th>
+    <th>Job</th>
+    <th>Adress</th>
+    <th>Telephone</th>
+    <th>Access</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sotrudnikis.each do |sotrudniki| %>
+  <tr>
+    <td><%= sotrudniki.tab_number %></td>
+    <td><%= sotrudniki.name %></td>
+    <td><%= sotrudniki.short_name %></td>
+    <td><%= sotrudniki.username %></td>
+    <td><%= sotrudniki.email %></td>
+    <td><%= sotrudniki.district %></td>
+    <td><%= sotrudniki.job %></td>
+    <td><%= sotrudniki.adress %></td>
+    <td><%= sotrudniki.telephone %></td>
+    <td><%= sotrudniki.access %></td>
+    <td><%= link_to 'Show', sotrudniki %></td>
+    <td><%= link_to 'Edit', edit_sotrudniki_path(sotrudniki) %></td>
+    <td><%= link_to 'Destroy', sotrudniki, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sotrudniki', new_sotrudniki_path %>

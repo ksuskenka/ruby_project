@@ -1,0 +1,3 @@
+class Sotrudniki < ActiveRecord::Base
+  attr_accessible :access, :adress, :district, :email, :job, :name, :short_name, :tab_number, :telephone, :username
+end
