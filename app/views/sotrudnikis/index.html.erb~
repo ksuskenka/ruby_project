@@ -39,4 +39,4 @@
 
 <br />
 
-<%= link_to 'Добавить', new_sotrudniki_path %>
+<%= link_to 'Новый сотрудник', new_sotrudniki_path %>

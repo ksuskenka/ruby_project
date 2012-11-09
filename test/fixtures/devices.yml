@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  Dev_type: MyString
+  dev_name: MyString
+  department: MyString
+  worker: MyString
+  invent_number: MyString
+  district: MyString
+  dev_cost: MyString
+  date_intr: MyString
+  date_of_introduce: MyString
+  object_operation: false
+  operation_dat: MyString
+  date_kil: MyString
+  amortization: MyString
+
+two:
+  Dev_type: MyString
+  dev_name: MyString
+  department: MyString
+  worker: MyString
+  invent_number: MyString
+  district: MyString
+  dev_cost: MyString
+  date_intr: MyString
+  date_of_introduce: MyString
+  object_operation: false
+  operation_dat: MyString
+  date_kil: MyString
+  amortization: MyString

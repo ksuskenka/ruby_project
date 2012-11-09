@@ -1,0 +1,47 @@
+<h1>Listing devices</h1>
+
+<table>
+  <tr>
+    <th>Dev type</th>
+    <th>Dev name</th>
+    <th>Department</th>
+    <th>Worker</th>
+    <th>Invent number</th>
+    <th>District</th>
+    <th>Dev cost</th>
+    <th>Date intr</th>
+    <th>Date of introduce</th>
+    <th>Object operation</th>
+    <th>Operation dat</th>
+    <th>Date kil</th>
+    <th>Amortization</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @devices.each do |device| %>
+  <tr>
+    <td><%= device.Dev_type %></td>
+    <td><%= device.dev_name %></td>
+    <td><%= device.department %></td>
+    <td><%= device.worker %></td>
+    <td><%= device.invent_number %></td>
+    <td><%= device.district %></td>
+    <td><%= device.dev_cost %></td>
+    <td><%= device.date_intr %></td>
+    <td><%= device.date_of_introduce %></td>
+    <td><%= device.object_operation %></td>
+    <td><%= device.operation_dat %></td>
+    <td><%= device.date_kil %></td>
+    <td><%= device.amortization %></td>
+    <td><%= link_to 'Show', device %></td>
+    <td><%= link_to 'Edit', edit_device_path(device) %></td>
+    <td><%= link_to 'Destroy', device, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Device', new_device_path %>

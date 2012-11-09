@@ -23,7 +23,7 @@
 <% @ustroystvas.each do |ustroystva| %>
   <tr>
     <td><%= ustroystva.type_ustroystva %></td>
-    <td><%= ustroystva.name_ustroystva %></td>
+    <td><%= ustroystva.ustroystva %></td>
     <td><%= ustroystva.department %></td>
     <td><%= ustroystva.worker %></td>
     <td><%= ustroystva.invent_number %></td>

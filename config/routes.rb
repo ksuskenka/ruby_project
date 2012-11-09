@@ -1,4 +1,6 @@
 First::Application.routes.draw do
+  resources :devices
+
   resources :departments
 
   resources :ustroystvas

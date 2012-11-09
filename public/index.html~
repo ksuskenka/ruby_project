@@ -212,7 +212,7 @@
           <h1>Авторизация пользователя</h1>
         </div>
 
-      <form action="/0.0.0.0:3000/sotrudnikis" method="post">
+      <form action="/sotrudnikis" method="get">
    <div class="field">
            
               <h2 font-size="20px">логин     <span class="filename"></span><input type="text" size=10></input></h2>
@@ -223,7 +223,12 @@
        
 </div>
 <div align="right" class="actions">
-     <h2>      <input type="submit" style="width:100px;height:30px" value="войти" /> 
+     <h2>      <input type="submit" style="width:100px;height:30px"  value="Сотрудники" /> 
+          </h2>
+        </div>
+
+<div align="right" class="actions">
+     <h2>      <input type="submit" style="width:100px;height:30px" action="/departments" method="get" value="Отделы" /> 
           </h2>
         </div>
 </form>
