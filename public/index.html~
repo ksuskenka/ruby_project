@@ -63,7 +63,7 @@
 
 
       #header {
-        background-image: url("assets/rails.png");
+        background-image: url("assets/Orgtexnika.png");
         background-repeat: no-repeat;
         background-position: top left;
         height: 64px;
@@ -212,23 +212,18 @@
           <h1>Авторизация пользователя</h1>
         </div>
 
-      <form action="/sotrudnikis" method="get">
+      <form action="/menu" method="get">
    <div class="field">
            
-              <h2 font-size="20px">логин     <span class="filename"></span><input type="text" size=10></input></h2>
+              <h2 font-size="20px">логин     <span class="filename"></span><input align="centre" type="text" size=10></input></h2>
              
              <h2>пароль
-              <span class="filename"></span> <input type="text" size=10></input></h2>
+              <span class="filename"></span> <input align="centre" type="text" size=10></input></h2>
           </ol>
        
 </div>
 <div align="right" class="actions">
-     <h2>      <input type="submit" style="width:100px;height:30px"  value="Сотрудники" /> 
-          </h2>
-        </div>
-
-<div align="right" class="actions">
-     <h2>      <input type="submit" style="width:100px;height:30px" action="/departments" method="get" value="Отделы" /> 
+     <h2>      <input type="submit" style="width:100px;height:30px"  value="Войти" /> 
           </h2>
         </div>
 </form>

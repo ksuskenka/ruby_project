@@ -2,9 +2,9 @@
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Short name</th>
-    <th>Manager</th>
+    <th>Название</th>
+    <th>Абревиатура</th>
+    <th>Начальник</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,13 +15,13 @@
     <td><%= department.name %></td>
     <td><%= department.short_name %></td>
     <td><%= department.manager %></td>
-    <td><%= link_to 'Show', department %></td>
-    <td><%= link_to 'Edit', edit_department_path(department) %></td>
-    <td><%= link_to 'Destroy', department, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Посмотреть', department %></td>
+    <td><%= link_to 'Редактировать', edit_department_path(department) %></td>
+    <td><%= link_to 'Удалить', department, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Department', new_department_path %>
+<%= link_to 'Новый отдел', new_department_path %>
