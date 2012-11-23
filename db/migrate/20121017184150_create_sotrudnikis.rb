@@ -11,6 +11,7 @@ class CreateSotrudnikis < ActiveRecord::Migration
       t.string :adress
       t.string :telephone
       t.boolean :access
+      t.string :password
 
       t.timestamps
     end

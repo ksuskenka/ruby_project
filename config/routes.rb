@@ -1,4 +1,6 @@
 First::Application.routes.draw do
+  get "sessions/new"
+
   resources :devices
 
   resources :departments
@@ -10,6 +12,11 @@ First::Application.routes.draw do
   resources :microposts
 
   resources :users
+  resources :sessions, :only => [:new, :create, :destroy]
+
+  match '/signup',  :to => 'users#new'
+  match '/',  :to => 'sessions#new'
+  match '/signout', :to => 'sessions#destroy'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
