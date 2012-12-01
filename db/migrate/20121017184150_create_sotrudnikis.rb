@@ -16,4 +16,7 @@ class CreateSotrudnikis < ActiveRecord::Migration
       t.timestamps
     end
   end
+  def self.down
+    drop_table :sotrudnikis
+  end
 end

@@ -1,3 +1,5 @@
+<%= title "Сотрудники"%>
+<%= collection_select(:department, :name, Sotrudniki.all, :id, :department)%>
 <%= form_for(@sotrudniki) do |f| %>
   <% if @sotrudniki.errors.any? %>
     <div id="error_explanation">
@@ -12,16 +14,16 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name %>
+    <%= f.label :Таб_номер %><br />
+    <%= f.number_field :tab_number %>
   </div>
   <div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name %>
+    <%= f.label :ФИО %><br />
+    <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :number %><br />
-    <%= f.text_field :number %>
+    <%= f.label :Короткое_имя %><br />
+    <%= f.text_field :short_name %>
   </div>
   <div class="field">
     <%= f.label :username %><br />
@@ -32,23 +34,23 @@
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :district %><br />
-    <%= f.text_field :district %>
+    <%= f.label :Отдел %><br />
+    <%= f. :district %>
   </div>
   <div class="field">
-    <%= f.label :job %><br />
+    <%= f.label :Должность %><br />
     <%= f.text_field :job %>
   </div>
   <div class="field">
-    <%= f.label :adress %><br />
+    <%= f.label :Адрес %><br />
     <%= f.text_field :adress %>
   </div>
   <div class="field">
-    <%= f.label :telephone %><br />
+    <%= f.label :Телефон %><br />
     <%= f.text_field :telephone %>
   </div>
   <div class="field">
-    <%= f.label :access %><br />
+    <%= f.label :Доступ %><br />
     <%= f.check_box :access %>
   </div>
   <div class="actions">

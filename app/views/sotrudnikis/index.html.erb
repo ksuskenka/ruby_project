@@ -14,7 +14,7 @@
     <th>Адрес</th>
     <th>Телефон</th>
     <th>Доступ</th>
-    <th>Пароль</th>
+
     <th></th>
     <th></th>
     <th></th>
@@ -32,7 +32,7 @@
     <td><%= sotrudniki.adress %></td>
     <td><%= sotrudniki.telephone %></td>
     <td><%= sotrudniki.access %></td>
-    <td><%= sotrudniki.password %></td>
+
     <td><%= link_to 'Посмотреть', sotrudniki %></td>
     <td><%= link_to 'Редактировать', edit_sotrudniki_path(sotrudniki) %></td>
     <td><%= link_to 'Удалить', sotrudniki, method: :delete, data: { confirm: 'Вы уверены?' } %></td>

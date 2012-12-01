@@ -31,7 +31,7 @@
       #page {
 
         background-color: #f0f0f0;
-        width: 750px;
+        
         margin: 0;
         margin-left: auto;
         margin-right: auto;
@@ -42,9 +42,9 @@
         float: left;
         background-color: white;
         border: 3px solid #aaa;
+	
         border-top: none;
         padding: 25px;
-        width: 500px;
       }
 
       #sidebar {
@@ -209,20 +209,24 @@
 
       <div id="content">
         <div id="header">
-          <h1>Авторизация пользователя</h1>
+          <h1></h1>
         </div>
 
       <form action="/menu" method="get">
-   <div class="field">
+   <div>
            
-              <h2 font-size="20px">логин     <span class="filename"></span><input align="centre" type="text" size=10></input></h2>
+              <h2 font-size="20px">логин     <span class="filename"></span>
+		<div style="margin-left:20;"><input align="centre" type="text" size=10></input>
+
+</div></h2>
              
              <h2>пароль
-              <span class="filename"></span> <input align="centre" type="text" size=10></input></h2>
+              <span class="filename"></span> <div style="margin-left:20;"><input align="centre" type="text" size=10></input></div>
+	</h2>
           </ol>
        
 </div>
-<div align="right" class="actions">
+<div align="left" class="actions">
      <h2>      <input type="submit" style="width:100px;height:30px"  value="Войти" /> 
           </h2>
         </div>
