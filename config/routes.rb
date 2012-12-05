@@ -19,6 +19,7 @@ First::Application.routes.draw do
   match '/signup',  :to => 'public#menu'
   match '/',  :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
+  match '/menu', :to=> 'menu.html'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
