@@ -1,4 +1,29 @@
 class Sotrudniki < ActiveRecord::Base
+
+  before_save :encrypt_password
+
+  def has_password?(submitted_password)
+    password == submitted_password
+  end
+
+  private
+
+  def encrypt_password
+    self.salt = make_salt if new_record?
+
+  end
+
+  def encrypt(string)
+    secure_hash("#{salt}--#{string}")
+  end
+
+  def make_salt
+    secure_hash("#{Time.now.utc}--#{password}")
+  end
+
+  def secure_hash(string)
+    Digest::SHA2.hexdigest(string)
+  end
   def self.authenticate(email, submitted_password)
     user = find_by_email(email)
     return nil  if user.nil?
@@ -11,5 +36,5 @@ class Sotrudniki < ActiveRecord::Base
   end
   has_many:devices
   belongs_to:departments
-  attr_accessible :access, :adress, :district, :email, :job, :name, :password, :short_name, :tab_number, :telephone, :username
+  attr_accessible :access, :adress, :district, :email, :job, :name, :password,:salt, :short_name, :tab_number, :telephone, :username
 end
