@@ -11,10 +11,12 @@ First::Application.routes.draw do
 
   resources :microposts
 
+  resources :menu
+
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
 
-  match '/signup',  :to => 'users#new'
+  match '/signup',  :to => 'public#menu'
   match '/',  :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
 
