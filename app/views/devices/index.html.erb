@@ -22,6 +22,8 @@
   </tr>
 
 <% @devices.each do |device| %>
+<%= button_to 'Пересчитать амортизацию', device,method: device.setAmortization, data: {confirm: 'Are you sure?'} %>
+      <%  dev=device.amortization %>
   <tr>
     <td><%= device.Dev_type %></td>
     <td><%= device.dev_name %></td>
@@ -35,7 +37,7 @@
     <td><%= device.object_operation %></td>
     <td><%= device.operation_dat %></td>
     <td><%= device.date_kil %></td>
-    <td><%= device.amortization %></td>
+    <td><%= dev %></td>
     <td><%= link_to 'Посмотреть', device %></td>
     <td><%= link_to 'Редактировать', edit_device_path(device) %></td>
     <td><%= link_to 'Удалить', device, method: :delete, data: { confirm: 'Are you sure?' } %></td>

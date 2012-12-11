@@ -1,6 +1,7 @@
 <meta charset="UTF-8">
 <%= title "Список сотрудников" %>
 <h1>Сотрудники</h1>
+<div id="sidebar"><a href="/departments">Rails API</a></div>
 
 <table>
   <tr>
@@ -20,26 +21,26 @@
     <th></th>
   </tr>
 
-<% @sotrudnikis.each do |sotrudniki| %>
-  <tr>
-    <td><%= sotrudniki.tab_number %></td>
-    <td><%= sotrudniki.name %></td>
-    <td><%= sotrudniki.short_name %></td>
-    <td><%= sotrudniki.username %></td>
-    <td><%= sotrudniki.email %></td>
-    <td><%= sotrudniki.district %></td>
-    <td><%= sotrudniki.job %></td>
-    <td><%= sotrudniki.adress %></td>
-    <td><%= sotrudniki.telephone %></td>
-    <td><%= sotrudniki.access %></td>
+  <% @sotrudnikis.each do |sotrudniki| %>
+      <tr>
+        <td><%= sotrudniki.tab_number %></td>
+        <td><%= sotrudniki.name %></td>
+        <td><%= sotrudniki.short_name %></td>
+        <td><%= sotrudniki.username %></td>
+        <td><%= sotrudniki.email %></td>
+        <td><%= sotrudniki.district %></td>
+        <td><%= sotrudniki.job %></td>
+        <td><%= sotrudniki.adress %></td>
+        <td><%= sotrudniki.telephone %></td>
+        <td><%= sotrudniki.access %></td>
 
-    <td><%= link_to 'Посмотреть', sotrudniki %></td>
-    <td><%= link_to 'Редактировать', edit_sotrudniki_path(sotrudniki) %></td>
-    <td><%= link_to 'Удалить', sotrudniki, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
-  </tr>
-<% end %>
+        <td><%= link_to 'Посмотреть', sotrudniki %></td>
+        <td><%= link_to 'Редактировать', edit_sotrudniki_path(sotrudniki) %></td>
+        <td><%= link_to 'Удалить', sotrudniki, method: :delete, data: {confirm: 'Вы уверены?'} %></td>
+      </tr>
+  <% end %>
 </table>
 
-<br />
+<br/>
 
 <%= link_to 'Добавить', new_sotrudniki_path %>
