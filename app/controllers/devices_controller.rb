@@ -80,13 +80,13 @@ class DevicesController < ApplicationController
       format.json { head :no_content }
     end
   end
-  def setAmortization
+  #def setAmortization
     #@devices.each do |device|
-    @devices = Device.all
-    tmp=amortization.to_f
-    tmp=dev_cost.to_f/4.0
-    amortization=tmp.to_s
-    "#{tmp}"
-    end
-  end
+   # @devices = Device.all
+   # tmp=amortization.to_f
+   # tmp=dev_cost.to_f/4.0
+   # amortization=tmp.to_s
+   # "#{tmp}"
+   # end
+  #end
 end

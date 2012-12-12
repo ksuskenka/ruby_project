@@ -1,8 +1,8 @@
 <meta charset="UTF-8">
 <h1>Устройства</h1>
 <%= title "Список устройств" %>
-<div id="sidebar"><a href="/departments">Отделы</a></div>
-<div id="sidebar"><a href="/sotrudnikis">Сотрудники</a></div>
+<div id="sidebar">Перейти в таблицу: <a href="/departments">Отделы</a>
+  <a href="/sotrudnikis">Сотрудники</a></div>
 <table>
   <tr>
     <th>Тип</th>
@@ -47,5 +47,5 @@
 </table>
 
 <br />
-<%= button_to 'Пересчитать амортизацию', device,method: :setAmortization, data: {confirm: 'Are you sure?'} %>
+<%= button_to'Пересчитать амортизацию',method: :setAmortization, data: {confirm: 'Are you sure?'} %>
 <%= link_to 'Добавить', new_device_path %>
