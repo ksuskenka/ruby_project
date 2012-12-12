@@ -12,55 +12,55 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :Dev_type %><br />
+    <%= f.label :Тип_устройства %><br />
     <%= f.text_field :Dev_type %>
   </div>
   <div class="field">
-    <%= f.label :dev_name %><br />
+    <%= f.label :Название %><br />
     <%= f.text_field :dev_name %>
   </div>
   <div class="field">
-    <%= f.label :department %><br />
+    <%= f.label :Отдел %><br />
     <%= f.text_field :department %>
   </div>
   <div class="field">
-    <%= f.label :worker %><br />
-    <%= f.text_field :worker %>
+    <%= f.label :Сотрудник %><br />
+    <%= collection_select(:sotrudniki, :name, Sotrudniki.all, :id, :worker_name) %>
   </div>
   <div class="field">
-    <%= f.label :invent_number %><br />
+    <%= f.label :Инвертарный_номер %><br />
     <%= f.text_field :invent_number %>
   </div>
   <div class="field">
-    <%= f.label :district %><br />
-    <%= f.text_field :district %>
+    <%= f.label :Отдел %><br />
+    <%= collection_select(:department, :name, Department.all, :id, :department_name) %>
   </div>
   <div class="field">
-    <%= f.label :dev_cost %><br />
+    <%= f.label :Цена %><br />
     <%= f.text_field :dev_cost %>
   </div>
   <div class="field">
-    <%= f.label :date_intr %><br />
+    <%= f.label :Дата_ввода %><br />
     <%= f.text_field :date_intr %>
   </div>
   <div class="field">
-    <%= f.label :date_of_introduce %><br />
+    <%= f.label :Дата_выпуска %><br />
     <%= f.text_field :date_of_introduce %>
   </div>
   <div class="field">
-    <%= f.label :object_operation %><br />
+    <%= f.label :Списание %><br />
     <%= f.check_box :object_operation %>
   </div>
   <div class="field">
-    <%= f.label :operation_dat %><br />
+    <%= f.label :Дата_проведения %><br />
     <%= f.text_field :operation_dat %>
   </div>
   <div class="field">
-    <%= f.label :date_kil %><br />
+    <%= f.label :Дата_списания %><br />
     <%= f.text_field :date_kil %>
   </div>
   <div class="field">
-    <%= f.label :amortization %><br />
+    <%= f.label :Амортизация %><br />
     <%= f.text_field :amortization %>
   </div>
   <div class="actions">

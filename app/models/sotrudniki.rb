@@ -37,4 +37,7 @@ class Sotrudniki < ActiveRecord::Base
   has_many:devices
   belongs_to:departments
   attr_accessible :access, :adress, :district, :email, :job, :name, :password,:salt, :short_name, :tab_number, :telephone, :username
+  def worker_name
+    "#{name}"
+  end
 end

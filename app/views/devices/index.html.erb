@@ -1,6 +1,8 @@
 <meta charset="UTF-8">
 <h1>Устройства</h1>
-
+<%= title "Список устройств" %>
+<div id="sidebar"><a href="/departments">Отделы</a></div>
+<div id="sidebar"><a href="/sotrudnikis">Сотрудники</a></div>
 <table>
   <tr>
     <th>Тип</th>
@@ -22,8 +24,7 @@
   </tr>
 
 <% @devices.each do |device| %>
-<%= button_to 'Пересчитать амортизацию', device,method: device.setAmortization, data: {confirm: 'Are you sure?'} %>
-      <%  dev=device.amortization %>
+
   <tr>
     <td><%= device.Dev_type %></td>
     <td><%= device.dev_name %></td>
@@ -37,7 +38,7 @@
     <td><%= device.object_operation %></td>
     <td><%= device.operation_dat %></td>
     <td><%= device.date_kil %></td>
-    <td><%= dev %></td>
+    <td><%= device.amortization %></td>
     <td><%= link_to 'Посмотреть', device %></td>
     <td><%= link_to 'Редактировать', edit_device_path(device) %></td>
     <td><%= link_to 'Удалить', device, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -46,5 +47,5 @@
 </table>
 
 <br />
-
+<%= button_to 'Пересчитать амортизацию', device,method: :setAmortization, data: {confirm: 'Are you sure?'} %>
 <%= link_to 'Добавить', new_device_path %>
