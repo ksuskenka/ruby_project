@@ -20,10 +20,6 @@
     <%= f.text_field :dev_name %>
   </div>
   <div class="field">
-    <%= f.label :Отдел %><br />
-    <%= f.text_field :department %>
-  </div>
-  <div class="field">
     <%= f.label :Сотрудник %><br />
     <%= collection_select(:sotrudniki, :name, Sotrudniki.all, :id, :worker_name) %>
   </div>
